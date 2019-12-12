@@ -6,6 +6,11 @@
       .body_background{background: rgb(46, 188, 217,0.1)}
       .About{background: rgb(58, 73, 79,0.2)}
       .Timefont{font-family: 'Permanent Marker', cursive;}
+      .ml-auto{ background: rgb(46, 188, 217,0.2);}
+      .img-1 {max-width: 100%}
+      .img-2{ display: none;}
+      .SZ_1{font-size: 20px;}
+      .a3{height: 500PX;}
       </style>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
@@ -20,33 +25,16 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 
     <title>class10</title>
   </head>
-  <body class="body_background">
+  <body class="body_background "data-spy="scroll" data-target="#navbar-example" data-offset="0">
       <div class="row " >
-          <nav class="navbar fixed-top">
-                <div class="col-10"></div>
-                <div class="navbar col-1 border">
-                        <ul class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical" >
-                                <li class="nav-item">
-                                  <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#About1" role="tab" aria-controls="v-pills-home" aria-selected="true">About</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Link</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Link</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link " id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true" >Disabled</a>
-                                </li>
-                              </ul> 
-                </div>
-                <div class="col-1"></div>
-          </nav>            
+        <div class="navbar position-fixed" ><a class="" id="nowtime"></a><a class="" id="Ccity"></a></div>
+        <div class="navbar fixed-bottom col-2" ><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/289604106&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></div>          
       </div>
-      <div class="container">
+      <div class="container" >
             <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
                     <ol class="carousel-indicators">
                       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -77,103 +65,219 @@
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-            <div class="About">
-                <div class="jumbotron">
-                  <h1 class="display-4">About Me</h1>
+
+            <div class="About "id="About" >
+                <div class="jumbotron row">
+                  <h1 class="display-4" >About Me</h1>
                   <p>This is the website I made for this lesson, and he is also a personal website where I showcase my learning. Here you will be able to see my growth.</p>
                   <hr class="my-4">
-
+                  <div class="col-6">
+                      <iframe width="325" height="280" frameborder="0" src="https://www.bing.com/maps/embed?h=280&w=325&cp=36.33584260711049~127.45263864699967&lvl=17&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+                      </iframe>
+                      
+                  </div>
+                  <div id="cont_c5cb4ed3b7dcddc2daf15f57a0030e85"><script type="text/javascript" async src="https://www.theweather.com/wid_loader/c5cb4ed3b7dcddc2daf15f57a0030e85"></script></div>
                 </div>
             </div>
-            <div>
-              <div class="card-header" >
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#a11" aria-expanded="false" aria-controls="collapseExample">
-                  Button1
-                </button>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Button2</button>
+            <div class="ForMe" id="ForMe">
+              <div class="jumbotron">
+                <h1 class="display-4" id="ForMe">For Me</h1>
+                <hr class="my-4">
+                <div class="row">
+                    <div ><img class="img-2" class=" img-1 rounded mx-auto d-block" src="img/me.jpeg"></div>
+                    <div class="col-5" ><img class="img-1 rounded-circle" src="img/me.jpeg"></div>
+                    <div class="col-7"><p class="SZ_1">Please forgive me for not wanting to provide my personal photo. I am now a junior college student, enrolled in a game design major and sent to university. 
+                      For the time being, I can only be considered a novice, and I can't produce works completely independently, so most of my works will refer to a lot of information. 
+                      There are others' works, and I will explain them. For example, all the pictures except for my works are from the Internet.</p>
+                    </div>
+                </div>
               </div>
-              <div class="collapse" id="a11">
-                <div class="card card-body">
-                    <div class="row text-center text-lg-left">
+          </div>
+          <div class="Skill" id="Skill">
+              <div class="jumbotron">
+                <h1 class="display-4">Skill</h1>
+                <hr class="my-4">
+                <p>These are the software and knowledge I am learning and using. Although I can't use them proficiently yet, I will continue to learn.</p>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#A13" aria-expanded="false" aria-controls="collapseExample">
+                    Skill
+                  </button>
+                     <div class="collapse" id="A13">
+                      <div class="card card-body ">
+                        <div class="row text-center text-lg-left">
+                          <div class="col-lg-3 col-md-4 col-6">
+                              <a href="#" class="d-block mb-4 h-100">
+                                    <img class="img-fluid img-thumbnail" src="img/LOGO1.jpg" alt="">
+                                  </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                              <a href="#" class="d-block mb-4 h-100">
+                                    <img class="img-fluid img-thumbnail" src="img/LOGO2.jpg" alt="">
+                                  </a>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <a href="#" class="d-block mb-4 h-100">
+                                      <img class="img-fluid img-thumbnail" src="img/LOGO3.jpg" alt="">
+                                    </a>
+                              </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <a href="#" class="d-block mb-4 h-100">
+                                      <img class="img-fluid img-thumbnail" src="img/LOGO4.jpg" alt="">
+                                    </a>
+                              </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <a href="#" class="d-block mb-4 h-100">
+                                      <img class="img-fluid img-thumbnail" src="img/LOGO5.jpg" alt="">
+                                    </a>
+                              </div>
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <a href="#" class="d-block mb-4 h-100">
+                                      <img class="img-fluid img-thumbnail" src="img/LOGO6.jpg" alt="">
+                                    </a>
+                              </div>
 
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/pWkk7iiCoDM/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aob0ukAYfuI/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EUfxH-pze7s/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/M185_qYH8vg/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/sesveuG_rNo/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/AvhMzHwiE_0/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/2gYsZUmockw/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/EMSDtjVHdQ8/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/8mUEy0ABdNE/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/G9Rfc1qccH4/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/aJeH0KcFkuc/400x300" alt="">
-                              </a>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-6">
-                          <a href="#" class="d-block mb-4 h-100">
-                                <img class="img-fluid img-thumbnail" src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300" alt="">
-                              </a>
-                        </div>
+                          </div>
                       </div>
-                </div>
+                    </div>
               </div>
+          </div>
+          <div class="Gallery" id="Gallery">
+              <div class="jumbotron">
+                <h1 class="display-4">Gallery</h1>
+                <p>Here is my personal work</p>
+                <hr class="my-4">
+                <div>
+                    <div class="card-header" >
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#a11" aria-expanded="false" aria-controls="collapseExample">
+                        UE4-Game production
+                      </button>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#a12" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
+                        UE4-Special effects</button>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
+                      3DMAX-model</button>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
+                      HTML</button>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
+                      Artist</button>
+                    </div>
+                    <div class="collapse" id="a11">
+                      <div class="card card-body">
+                          <div class="row text-center text-lg-left">      
+                            <div class="card ml-5 mb-3" style="width: 18rem;">
+                              <img src="img/ue4-1.JPG" class="card-img-top" alt="...">
+                              <div class="card-body">
+                                <p class="card-text "><a class="font-weight-bold">Title:</a>Model first</p>
+                                <p class="card-text"><a class="font-weight-bold">Spend time:</a>2019</p>
+                                <p class="card-text"><a class="font-weight-bold">Description:</a>The first time I studied ue4</p>
+                              </div>
+                            </div>
+                            <div class="card ml-5 mb-3" style="width: 18rem;">
+                                <img src="img/ue4-2.JPG" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text "><a class="font-weight-bold">Title:</a>Grassland</p>
+                                  <p class="card-text"><a class="font-weight-bold">Spend time:</a>2019</p>
+                                  <p class="card-text"><a class="font-weight-bold">Description:</a>The grass material I made for the game</p>
+                                </div>
+                              </div>
+                            <div class="card ml-5 mb-3" style="width: 18rem;">
+                                <img src="img/ue4-3.JPG" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text "><a class="font-weight-bold">Title:</a>sound</p>
+                                  <p class="card-text"><a class="font-weight-bold">Spend time:</a>2019</p>
+                                  <p class="card-text"><a class="font-weight-bold">Description:</a>Game sound effects make sound</p>
+                                </div>
+                              </div>
+                              <div class="card ml-5 mb-3" style="width: 18rem;">
+                                  <img src="img/ue4-4.JPG" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <p class="card-text "><a class="font-weight-bold">Title:</a>platform</p>
+                                    <p class="card-text"><a class="font-weight-bold">Spend time:</a>2019</p>
+                                    <p class="card-text"><a class="font-weight-bold">Description:</a>Game level platform production</p>
+                                  </div>
+                                </div>
+                                <div class="card ml-5 mb-3" style="width: 18rem;">
+                                    <img src="img/ue4-5.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <p class="card-text "><a class="font-weight-bold">Title:</a>UI</p>
+                                      <p class="card-text"><a class="font-weight-bold">Spend time:</a>2019</p>
+                                      <p class="card-text"><a class="font-weight-bold">Description:</a>Game interface production</p>
+                                    </div>
+                                  </div>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="collapse" id="a12">
+                        <div class="card card-body">
+                            <div class="row text-center text-lg-left">      
+                              <div class="card ml-5 mb-3" style="width: 18rem;">
+                                <img src="img/ue4_1.JPG" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <p class="card-text "><a class="font-weight-bold">Title:</a>honeycomb</p>
+                                  <p class="card-text"><a class="font-weight-bold">Spend time:</a>2019</p>
+                                  <p class="card-text"><a class="font-weight-bold">Description:</a>This is a hive</p>
+                                </div>
+                              </div>
+                              <div class="card ml-5 mb-3" style="width: 18rem;">
+                                  <img src="img/ue4_2.JPG" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <p class="card-text "><a class="font-weight-bold">Title:</a>sea</p>
+                                    <p class="card-text"><a class="font-weight-bold">Spend time:</a>2019</p>
+                                    <p class="card-text"><a class="font-weight-bold">Description:</a>About the production of water bodies</p>
+                                  </div>
+                                </div>
+                              <div class="card ml-5 mb-3" style="width: 18rem;">
+                                  <img src="img/ue4_3.PNG" class="card-img-top" alt="...">
+                                  <div class="card-body">
+                                    <p class="card-text "><a class="font-weight-bold">Title:</a>waterfall</p>
+                                    <p class="card-text"><a class="font-weight-bold">Spend time:</a>2019</p>
+                                    <p class="card-text"><a class="font-weight-bold">Description:</a>Although not very beautiful, it is a waterfall</p>
+                                  </div>
+                                </div>
+                                <div class="card ml-5 mb-3" style="width: 18rem;">
+                                    <img src="img/ue4_4.JPG" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <p class="card-text "><a class="font-weight-bold">Title:</a>fire</p>
+                                      <p class="card-text"><a class="font-weight-bold">Spend time:</a>2019</p>
+                                      <p class="card-text"><a class="font-weight-bold">Description:</a>Flame effects</p>
+                                    </div>
+                                  </div>
+                              </div>
+                        </div>
+                      </div>      
+                  </div>
+              </div>
+          </div>
+          <div class="ContactInformation" id="ContactInformation">
+              <div class="jumbotron">
+                <h1 class="display-4">Contact information</h1>
+                <hr class="my-4">
+                <p>For my contact information, please contact my email:<a href="#" class="SZ_1">978176342@qq.com</a></p>
+                
 
-            </div>
-            <div >
-              <h1 class="" id="nowtime">1234567890</h1>
-            </div>
+              </div>
+          </div>
+
         
       </div>
-      <div class="row">
-
+      <div class="row "  >
+          <nav class="navbar fixed-top  "id="navbar-example">
+              <div class="col-6 "></div>
+              <div class=" ml-auto " id="yinch" >
+                  <ul class="nav nav-pills flex-column">
+                      <li class="nav-item"><a class="nav-link nav-pills active" href="#About">About</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#ForMe">ForMe</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#Skill">Skill</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#Gallery">Gallery</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#ContactInformation">ContactInformation</a></li>
+                    </ul>
+              </div>
+            </nav>    
       </div>
     
 
 
   </body>
   <script>
+    
       //页面加载调用
       window.onload=function(){
           //每1秒刷新时间
@@ -195,6 +299,9 @@
           h=check(h);
           m=check(m);
           s=check(s);
+
+          yinc();
+
           document.getElementById("nowtime").innerHTML="当前时间："+year+"年"+month+"月"+day+"日  "+h+":"+m+":"+s;
       }
       //时间数字小于10，则在之前加个“0”补位。
@@ -210,5 +317,17 @@
           }
           return i;
       }
+    
+    function yinc(){
+      if(document.body.clientWidth < 1000){
+        document.getElementById("yinch").style.display = 'none';
+      
+      }
+      if(document.body.clientWidth > 1000){
+        document.getElementById("yinch").style.display = '';
+      }
+
+}
+      
   </script>
 </html>
